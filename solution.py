@@ -18,13 +18,13 @@ square_units = [cross(rs, cs) for rs in ('ABC', 'DEF', 'GHI')
 unitlist = row_units + column_units + square_units
 
 # diagonal sudoku add units
-diag_rows_units = [[rows[i] + cols[i] for i in range(0,9)]]
-diag_cols_units = [[rows[i] + cols[8 - i] for i in range(0,9)]]
+diag_units = [[rows[i] + cols[i] for i in range(0,9)]]
+diag_back_units = [[rows[i] + cols[8 - i] for i in range(0,9)]]
 
 # add the diagonal units
 is_diagonal = True
 if is_diagonal:
-    unitlist += diag_rows_units + diag_cols_units
+    unitlist += diag_units_units + diag_back_units
 
 # create the dictionary of units and peers
 units = dict((s, [u for u in unitlist if s in u]) for s in boxes)
