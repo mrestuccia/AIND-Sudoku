@@ -3,11 +3,17 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: Naked Twins identify 
+A: Naked Twins identify pairs (2) of identical potential value within the same unit. 
+Once you identify those values, you can discard those possibles values from their peers, as you are certain those values
+will be in one of those pairs.
+After running iteratiblely "eliminate" and "only_choice", we can add  "naked twins" to reduce (contrain propagation) even
+more the potential variations before applying the Search technique (DFS).
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: The Diagonal Sudoku actually add an additional restriction that 1 to 9 can't repeat.
+This extends our units (and peers). 
+While applying contrain propagation (iteration using "eliminate", "only choice" and naked twing) we include the diagonals as part of the peers.
 
 ### Install
 

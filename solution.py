@@ -172,7 +172,7 @@ def search(values):
 
 
 def min_value(values):
-    # calculate the min value 
+    # calculate the min value
     _min_value = ''
     _min_key = ''
     for key in values:
