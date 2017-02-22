@@ -24,7 +24,7 @@ diag_back_units = [[rows[i] + cols[8 - i] for i in range(0,9)]]
 # add the diagonal units
 is_diagonal = True
 if is_diagonal:
-    unitlist += diag_units_units + diag_back_units
+    unitlist += diag_units + diag_back_units
 
 # create the dictionary of units and peers
 units = dict((s, [u for u in unitlist if s in u]) for s in boxes)
